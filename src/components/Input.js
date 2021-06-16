@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Input(props = {value, onChange, placeholder, type, disabled}) {
+export default function Input(props) {
     return (
         <input className="form-control" {...props} />
     )

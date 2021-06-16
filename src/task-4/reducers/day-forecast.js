@@ -1,8 +1,8 @@
 import {
-    OPEN_DAY_DETAILS,
     FETCH_DAY_START,
     FETCH_DAY_SUCCESS,
-    FETCH_DAY_FAILURE } from "../actions/day-forecast";
+    FETCH_DAY_FAILURE,
+    CHANGE_SELECTED_DT } from "../actions/day-forecast";
 
 const dayForecast = (state = {}, action) => {
     switch(action.type) {
@@ -24,7 +24,7 @@ const dayForecast = (state = {}, action) => {
 };
 
 const selectedDt = (state = null, action) => {
-    // Change me!
+    if(action.type === CHANGE_SELECTED_DT) return action.payload
     return state;
 };
 
